@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import getBook from '../api/getBook';
+import Book from '../components/Book';
 
 
 export async function loader({ params }) {
@@ -19,11 +20,17 @@ function BookPage() {
     const { book } = useLoaderData();
 
     console.log("Rendu !");
-    console.log("Voici le book :");
-    console.log(book);
+    // console.log("Voici le book :");
+    // console.log(book);
+
+    
 
   return (
-    <div>BookPage</div>
+    <div>
+        <Book book = { book }/>
+
+
+    </div>
   )
 }
 
