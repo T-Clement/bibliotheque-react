@@ -1,30 +1,23 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
-// import './index.css'
-// import { BrowserRouter } from 'react-router-dom'
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-  //   <React.StrictMode>
-  //     <BrowserRouter>
-  //       <App />
-  //     </BrowserRouter>
-  //   </React.StrictMode>,
-  // )
-  
-  import React from 'react'
-  import ReactDOM from 'react-dom/client'
-  import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-  import './index.css'
-// import App from './App.jsx'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import './index.css'
 
 
+// ---------------------
+// Components
+// ---------------------
 import Root from './routes/Root';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
 import Error404 from './pages/Error404';
-import BookPage, { loader as bookPageLoader } from './pages/BookPage';
+import BookPage, { loader as bookLoader } from './pages/BookPage';
 
+
+
+// ---------------------
+// Routing
+// ---------------------
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,7 +34,7 @@ const router = createBrowserRouter([
           {
             path: "books/:id",
             element: <BookPage />,
-            loader: bookPageLoader
+            loader: bookLoader
           }, 
           {
             path: "*",

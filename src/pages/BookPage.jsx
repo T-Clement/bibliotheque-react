@@ -16,9 +16,6 @@ export async function loader({ params }) {
 
 function BookPage() {
 
-    // const [bookData, setBookData] = useState(null);
-    // const { id } = useParams();
-
     const { book } = useLoaderData();
 
     console.log("Rendu !");
