@@ -17,6 +17,9 @@ function BooksPage() {
 
     console.log(books);
 
+
+  // add a search input
+    
   // scroll infinite -> fetch quand scroll arrivé au bout de la page. passer un offset et limit
 
   return (

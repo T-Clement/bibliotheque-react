@@ -12,30 +12,20 @@ function Root() {
   const isLoading = navigation.state === 'loading';
   
   
-  
   return (
     <>
       <header>
-            <NavBar />
-                {/* <NavLink to="/">Home</NavLink>
-                <NavLink to="/add-book">Ajouter un livre</NavLink> */}
-
-                {
-                //   (user) ? <><NavLink to="/profile">Welcome {}</NavLink><NavLink to="/rooms">Rooms</NavLink><button>Log-Out</button></> 
-                //   : 
-                //   <NavLink to="/sign-in" >Sign-in</NavLink>
-                }
-                
+            <NavBar />             
             
-        </header>
+      </header>
 
-        {isLoading && <Loading />}
+      {isLoading && <Loading />}
 
-        <main className='bg-slate-200'>
-          <Outlet />
-        </main>
-        
-        <Footer />
+      <main className='bg-slate-200'>
+        <Outlet />
+      </main>
+      
+      <Footer />
     
     </>
   )
