@@ -5,7 +5,7 @@ import getBooks from '../api/getBooks';
 import Card from '../components/Card';
 
 export async function loader () {
-    const books = await getBooks("asc", 5, 0);
+    const books = await getBooks("asc", 6, 0);
     return { books };
 }
 
@@ -20,9 +20,23 @@ function BooksPage() {
   // scroll infinite -> fetch quand scroll arrivé au bout de la page. passer un offset et limit
 
   return (
-    <div>
-        { books.data.books.map((book) => <Card key={book.id} id = {book.id} title = { book.name } pageCount = { book.pageCount } publishDate = { book.publishDate } />) }
-    </div>
+    <section className='max-w-screen-lg mx-auto py-6'>
+      <ul className='grid grid-cols-2 gap-y-28'>
+        { books.data.books
+        .map((book) => 
+          <li key={book.id} className='w-80 justify-self-center'>
+            <Card 
+              id = {book.id} 
+              title = { book.name } 
+              pageCount = { book.pageCount } 
+              publishDate = { book.publishDate } 
+            />
+          </li>
+          ) 
+        }
+        
+      </ul>
+    </section>
   )
 }
 

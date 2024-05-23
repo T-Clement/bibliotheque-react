@@ -26,7 +26,7 @@ function BookPage() {
     
 
   return (
-    <div>
+    <div className=''>
         <Book book = { book.data }/>
     </div>
   )
