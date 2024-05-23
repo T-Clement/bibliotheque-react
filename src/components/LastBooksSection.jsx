@@ -37,10 +37,10 @@ function LastBooksSection() {
     ( <p>Chargement en cours</p> )
     : 
     (
-    <>
+    <div className=''>
         <List lastBooks={lastBooks}/>
         <SeeMore />
-    </>
+    </div>
     )
 
   )

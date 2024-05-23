@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import Card from './Card'
-import getBooks from '../api/getBooks'
-import Book from './Book';
+
 
 function List({lastBooks}) {
 
@@ -11,7 +9,7 @@ function List({lastBooks}) {
 
   return (
       
-    <ul className='flex justify-center gap-3 border-2 border-red-400'>
+    <ul className='flex flex-col md:flex-row justify-center items-center gap-3 border-2 border-red-400'>
 
       {
         lastBooks.data.books.map(book => 

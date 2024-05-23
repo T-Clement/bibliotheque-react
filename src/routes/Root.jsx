@@ -13,7 +13,7 @@ function Root() {
   
   
   return (
-    <>
+    <div className='bg-slate-200'>
       <header>
             <NavBar />             
             
@@ -21,13 +21,13 @@ function Root() {
 
       {isLoading && <Loading />}
 
-      <main className='bg-slate-200'>
+      <main className='lg:max-w-screen-lg mx-auto border-2 border-red-950' >
         <Outlet />
       </main>
       
       <Footer />
     
-    </>
+    </div>
   )
 }
 

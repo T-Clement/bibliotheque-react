@@ -19,11 +19,11 @@ function BooksPage() {
 
 
   // add a search input
-    
+
   // scroll infinite -> fetch quand scroll arrivé au bout de la page. passer un offset et limit
 
   return (
-    <section className='max-w-screen-lg mx-auto py-6'>
+    <section className='py-6'>
       <ul className='grid grid-cols-2 gap-y-28'>
         { books.data.books
         .map((book) => 

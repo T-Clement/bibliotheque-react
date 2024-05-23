@@ -20,8 +20,8 @@ function Home() {
         <Banner />
       {/* <Loading /> */}
       {/* <Tuto /> */}
-      <section className='max-w-screen-lg mx-auto pb-6'>
-          <h2>Les derniers livres ajoutés !</h2>
+      <section className='mx-auto pb-6 border-2 border-pink-400'>
+          <h2 className='text-center md:text-left md:ps-4 py-5'>Les derniers livres ajoutés !</h2>
 
           <LastBooksSection />
 
