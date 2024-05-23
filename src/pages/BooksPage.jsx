@@ -2,7 +2,7 @@ import React from 'react'
 import { useLoaderData } from 'react-router-dom';
 
 import getBooks from '../api/getBooks';
-import Book from '../components/Book';
+import Card from '../components/Card';
 
 export async function loader () {
     const books = await getBooks("asc", 5, 0);
@@ -21,7 +21,7 @@ function BooksPage() {
 
   return (
     <div>
-        { books.data.books.map((book) => <Book key={book.id} book = {book} />) }
+        { books.data.books.map((book) => <Card key={book.id} id = {book.id} title = { book.name } pageCount = { book.pageCount } publishDate = { book.publishDate } />) }
     </div>
   )
 }

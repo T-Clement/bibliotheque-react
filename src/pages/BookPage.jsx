@@ -7,7 +7,7 @@ import Book from '../components/Book';
 export async function loader({ params }) {
     // console.log(params);
     const book = await getBook(params.id);
-    // console.log(book);
+    console.log(book);
     return { book };
 }
 
@@ -27,9 +27,7 @@ function BookPage() {
 
   return (
     <div>
-        <Book book = { book }/>
-
-
+        <Book book = { book.data }/>
     </div>
   )
 }
