@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import List from './List';
 import SeeMore from './SeeMore';
 import getBooks from '../api/getBooks';
+import Loading from './pages/Loading';
 
 function LastBooksSection() {
   
@@ -31,10 +32,13 @@ function LastBooksSection() {
 
 
 
+  // utiliser useMemo pour mémoriser la hauteur du Loading ?
+
+
   return (
 
     isLoading ?
-    ( <p>Chargement en cours</p> )
+    ( <Loading /> )
     : 
     (
     <div className=''>

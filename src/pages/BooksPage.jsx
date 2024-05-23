@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom';
 
 import getBooks from '../api/getBooks';
 import Card from '../components/Card';
+import Search from '../components/Search';
 
 export async function loader () {
     const books = await getBooks("asc", 6, 0);
@@ -17,6 +18,12 @@ function BooksPage() {
 
     console.log(books);
 
+    // states
+
+    const [search, setSearch] = useState('');
+
+
+
 
   // add a search input
 
@@ -24,7 +31,10 @@ function BooksPage() {
 
   return (
     <section className='py-6'>
-      <ul className='grid grid-cols-2 gap-y-28'>
+      
+      <Search search = { search } setSearch = { setSearch }/>
+
+      <ul className='grid grid-cols-1 md:grid-cols-2 gap-y-28'>
         { books.data.books
         .map((book) => 
           <li key={book.id} className='w-80 justify-self-center'>

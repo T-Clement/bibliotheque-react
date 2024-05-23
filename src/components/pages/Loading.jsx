@@ -4,7 +4,7 @@ import "./Loading.css";
 function Loading() {
   return (
     <>
-      <div>Loading...</div>
+      {/* <div>Loading...</div> */}
       <div className="bookshelf_wrapper">
         <ul className="books_list">
           <li className="book_item first"></li>
