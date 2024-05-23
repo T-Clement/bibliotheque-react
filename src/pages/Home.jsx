@@ -2,8 +2,20 @@ import React from 'react'
 import Banner from '../components/Banner'
 import List from '../components/List'
 import SeeMore from '../components/SeeMore'
+import getBooks from '../api/getBooks';
+
+
+// export async function loader () {
+//   const books = await getBooks("desc", 3, 0);
+//   return { books };
+// }
+
 
 function Home() {
+
+
+
+
   return (
     <>
         <Banner />

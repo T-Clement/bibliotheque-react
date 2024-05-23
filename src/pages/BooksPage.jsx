@@ -2,10 +2,10 @@ import React from 'react'
 import { useLoaderData } from 'react-router-dom';
 
 import getBooks from '../api/getBooks';
+import Book from '../components/Book';
 
 export async function loader () {
     const books = await getBooks("asc", 5, 0);
-    // console.log(book);
     return { books };
 }
 
@@ -21,7 +21,7 @@ function BooksPage() {
 
   return (
     <div>
-        
+        { books.data.books.map((book) => <Book key={book.id} book = {book} />) }
     </div>
   )
 }
