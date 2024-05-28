@@ -13,8 +13,8 @@ function Root() {
   
   
   return (
-    <div className='bg-slate-200'>
-      <header>
+    <div className='bg-slate-200 w-100'>
+      <header className='sticky top-0 z-10 bg-slate-500'>
             <NavBar />             
             
       </header>

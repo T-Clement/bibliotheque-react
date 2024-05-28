@@ -14,7 +14,7 @@ function Layout() {
 
   return (
     <>
-        <header>
+        <header className='fixed top-0'>
             <NavBar />
                 {/* <NavLink to="/">Home</NavLink>
                 <NavLink to="/add-book">Ajouter un livre</NavLink> */}

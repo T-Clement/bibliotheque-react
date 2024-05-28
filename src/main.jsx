@@ -76,6 +76,8 @@ const router = createBrowserRouter([
 
 
 
+// add the handling of no connection to database service  / check if service is api is running And display an error mesage related to this 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />

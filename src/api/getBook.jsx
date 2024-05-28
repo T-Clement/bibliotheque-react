@@ -7,6 +7,6 @@ export default async function getBook(id) {
       return {data: res.data, status: res.status, statusText : res.statusText} ;
       
     } catch (error) {
-      throw error;
+      throw new Error("Failed to fetch book data");
     }
   }
